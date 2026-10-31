@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cài đặt - StudyVerse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-page="settings">
+<header id="navbar" class="navbar"></header>
+<main id="content" class="content">
+<div class="page-settings">
+<section class="card settings-card">
+<div class="settings-head"><img src="../assets/icons/settings-big.svg" alt=""><div><h1>Cài đặt tài khoản</h1><p>Quản lý thông tin cá nhân và dữ liệu của bạn</p></div></div>
+<section class="settings-profile-section">
+<h2 class="settings-section-title">Thông tin cá nhân</h2>
+<div class="settings-avatar-block"><img id="avatarPreview" class="settings-avatar-preview" src="../assets/images/avatar.png" alt="Ảnh đại diện"><label class="btn btn-secondary settings-avatar-label" for="avatarInput">Thay ảnh đại diện</label><input id="avatarInput" type="file" accept="image/png,image/jpeg,image/webp" hidden></div>
+</section>
+<form id="settingsForm"><div class="settings-grid">
+<div class="field"><label for="fullNameInput">Họ và tên</label><input class="input input-outline" id="fullNameInput"></div>
+<div class="field"><label for="usernameInput">Tên tài khoản</label><input class="input input-outline" id="usernameInput" autocomplete="username"></div>
+</div>
+<div class="settings-save"><button type="submit" class="btn btn-primary">Lưu thay đổi</button></div>
+<p class="settings-msg" id="settingsMsg" role="status" hidden></p></form>
+<hr>
+<h2 class="settings-section-title">Đổi mật khẩu</h2>
+<form id="passwordForm" class="settings-password-form">
+<div class="field"><label for="currentPasswordInput">Mật khẩu hiện tại</label><input class="input input-outline" id="currentPasswordInput" type="password" autocomplete="current-password" required></div>
+<div class="settings-grid"><div class="field"><label for="newPasswordInput">Mật khẩu mới</label><input class="input input-outline" id="newPasswordInput" type="password" minlength="6" autocomplete="new-password" required></div><div class="field"><label for="confirmPasswordInput">Xác nhận mật khẩu mới</label><input class="input input-outline" id="confirmPasswordInput" type="password" minlength="6" autocomplete="new-password" required></div></div>
+<div class="settings-save"><button type="submit" class="btn btn-primary">Đổi mật khẩu</button></div><p class="settings-msg" id="passwordMsg" role="status" hidden></p></form>
+<hr>
+<h2>Dữ liệu phần mềm</h2>
+<p class="settings-note">Xóa dữ liệu demo sẽ xóa toàn bộ nhiệm vụ và dự án, không đăng xuất tài khoản của bạn</p>
+<button type="button" class="btn btn-outline-danger" id="clearDemoBtn">🗑 Xóa dữ liệu demo</button>
+<hr>
+<h2>Tài khoản</h2>
+<p class="settings-note">Xóa tài khoản sẽ xóa vĩnh viễn tài khoản này cùng toàn bộ nhiệm vụ và dự án trên trình duyệt. Thao tác này không thể hoàn tác.</p>
+<button type="button" class="btn btn-danger" id="deleteAccountBtn">🗑 Xóa tài khoản</button>
+</section>
+<div class="modal" id="deleteModal" hidden><div class="modal-box"><h2>Xác nhận xóa tài khoản</h2>
+<form class="modal-form" id="deleteForm">
+<p>Nhập mật khẩu để xác nhận xóa tài khoản. Bạn sẽ bị đăng xuất và không thể khôi phục.</p>
+<div class="field"><label for="deletePasswordInput">Mật khẩu</label><input class="input" type="password" id="deletePasswordInput" autocomplete="off" required></div>
+<p class="settings-error" id="deleteError" hidden></p>
+<div class="modal-actions"><button type="button" class="btn btn-secondary" id="deleteCancelBtn">Hủy</button><button type="submit" class="btn btn-danger">Xóa tài khoản</button></div>
+</form></div></div>
+<div class="modal" id="clearModal" hidden><div class="modal-box"><h2>Xác nhận xóa dữ liệu demo</h2>
+<p>Bạn có chắc muốn xóa toàn bộ nhiệm vụ và dự án?<br>Tài khoản của bạn vẫn được đăng nhập</p>
+<div class="modal-actions"><button type="button" class="btn btn-secondary" id="clearCancelBtn">Hủy</button><button type="button" class="btn btn-danger" id="clearConfirmBtn">Xóa</button></div></div></div>
+</div>
+</main>
+<script src="../js/storage.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/settings.js"></script>
+</body>
+</html>

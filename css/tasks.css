@@ -1,0 +1,25 @@
+.page-tasks .tasks-card{padding:var(--space-4);background:var(--bg-card-light)}
+.page-tasks .tasks-head{display:flex;align-items:center;justify-content:space-between;gap:var(--space-3);margin-bottom:var(--space-3)}
+.page-tasks .tasks-head h1{font-size:var(--font-size-card-title);text-transform:uppercase;font-weight:700}
+.page-tasks .tasks-toolbar{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:var(--space-3);margin-bottom:var(--space-3)}
+.page-tasks .tasks-name{font-weight:500}
+@media (max-width:1024px){.page-tasks .tasks-toolbar{grid-template-columns:1fr 1fr}}
+@media (max-width:768px){
+  .page-tasks .tasks-head{flex-direction:column;align-items:stretch}
+  .page-tasks .tasks-card{padding:var(--space-3)}
+  .page-tasks .tasks-toolbar{grid-template-columns:1fr}
+}
+
+.page-tasks .task-project-link{color:var(--text-link);text-decoration:none;font-weight:500}
+.page-tasks .task-project-link:hover{text-decoration:underline}
+.page-tasks input[type="time"]{min-width:0}
+
+.page-tasks .task-time-remaining{display:inline-block;white-space:normal;font-weight:500;color:var(--text-main)}
+.page-tasks .task-time-remaining.is-overdue{color:var(--color-danger)}
+.page-tasks .task-time-remaining.is-complete{color:var(--text-muted)}
+@media (max-width:768px){.page-tasks .task-time-remaining{min-width:110px}}
+
+.page-tasks .task-date{display:block;font-weight:500}
+.page-tasks .task-time{display:block;color:var(--text-muted);font-size:var(--font-size-small)}
+.page-tasks .table th,.page-tasks .table td{padding-left:10px;padding-right:10px}
+.page-tasks .table th:first-child,.page-tasks .table td:first-child{padding-left:var(--space-3)}

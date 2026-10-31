@@ -1,0 +1,15 @@
+.page-projects .projects-header{display:flex;flex-direction:column;align-items:center;gap:var(--space-2);text-align:center;margin-bottom:var(--space-4)}
+.page-projects .projects-header .btn{margin-top:var(--space-2)}
+.page-projects .projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4)}
+.page-projects .projects-card{display:flex;flex-direction:column;gap:var(--space-3)}
+.page-projects .projects-tags{display:flex;align-items:center;flex-wrap:wrap;gap:var(--space-2) var(--space-3)}
+.page-projects .projects-tags h2{font-size:var(--font-size-card-title);font-weight:700;margin-right:var(--space-1)}
+.page-projects .projects-meta{display:flex;align-items:center;justify-content:space-between;gap:var(--space-3)}
+.page-projects .projects-date{display:flex;align-items:center;gap:var(--space-2)}
+.page-projects .projects-count{font-size:var(--font-size-small)}
+.page-projects .projects-foot{display:flex;align-items:center;justify-content:space-between;gap:var(--space-3)}
+.page-projects .projects-empty{grid-column:1 / -1}
+@media (max-width:768px){.page-projects .projects-grid{grid-template-columns:1fr}}
+
+.page-projects .projects-time-remaining{font-size:var(--font-size-small);color:var(--text-muted);margin:calc(var(--space-2) * -1) 0 0}
+.page-projects .projects-time-remaining.is-overdue{color:var(--color-danger)}

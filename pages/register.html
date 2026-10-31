@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đăng ký - StudyVerse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/auth.css">
+</head>
+<body data-page="register">
+<main class="page-auth">
+<img class="auth-logo-small" src="../assets/images/logo.png" alt="StudyVerse">
+<form class="auth-form" id="authForm" novalidate>
+<h1 class="page-title auth-title">Chào mừng bạn đến với<br>StudyVerse</h1>
+<div class="field"><label for="fullNameInput">Họ và tên</label><input class="input" type="text" id="fullNameInput" autocomplete="name" required></div>
+<div class="field"><label for="usernameInput">Tên tài khoản</label><input class="input" type="text" id="usernameInput" autocomplete="username" required></div>
+<div class="field"><label for="emailInput">Email</label><input class="input" type="email" id="emailInput" required></div>
+<div class="field"><label for="passwordInput">Mật khẩu</label><div class="auth-pass"><input class="input" type="password" id="passwordInput" autocomplete="off" required><button type="button" class="eye" data-target="passwordInput" aria-label="Hiện/ẩn mật khẩu">👁</button></div></div>
+<div class="field"><label for="confirmInput">Nhập lại mật khẩu</label><div class="auth-pass"><input class="input" type="password" id="confirmInput" autocomplete="off" required><button type="button" class="eye" data-target="confirmInput" aria-label="Hiện/ẩn mật khẩu">👁</button></div></div>
+<p class="auth-error" id="authError" hidden></p>
+<button type="submit" class="btn btn-primary auth-submit">Đăng ký</button>
+<p class="auth-switch">Đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
+</form>
+<img class="auth-logo-big" src="../assets/images/logo.png" alt="StudyVerse">
+</main>
+<script src="../js/storage.js"></script>
+<script src="../js/auth.js"></script>
+</body>
+</html>

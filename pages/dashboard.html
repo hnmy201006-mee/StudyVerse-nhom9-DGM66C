@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard - StudyVerse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body data-page="dashboard">
+<header id="navbar" class="navbar"></header>
+<main id="content" class="content">
+<div class="page-dashboard">
+<section class="card dash-hero">
+<div class="hero-main">
+<p class="hero-chip" id="greeting"></p>
+<h1 class="page-title hero-title">Nền tảng quản lý công việc đầu tiên cho sinh viên</h1>
+<p class="hero-desc">Gom bài học, công việc làm thêm và dự án cá nhân vào một nơi duy nhất để bạn luôn biết hôm nay cần làm gì.</p>
+<div class="hero-actions"><a class="btn btn-primary" href="tasks.html">Xem nhiệm vụ</a><a class="btn btn-secondary" href="projects.html">Dự án cá nhân</a></div>
+</div>
+<ul class="hero-features">
+<li class="hero-feature"><span class="hero-icon">📅</span><div><strong>Planning</strong><span>Lên kế hoạch và theo dõi deadline từng nhiệm vụ</span></div></li>
+<li class="hero-feature"><span class="hero-icon">🎨</span><div><strong>Personalization</strong><span>Phân loại theo ưu tiên, dự án và cách học của riêng bạn</span></div></li>
+<li class="hero-feature"><span class="hero-icon">🏆</span><div><strong>Gamification</strong><span>Hoàn thành nhiệm vụ để thấy tiến độ tăng mỗi ngày</span></div></li>
+</ul>
+</section>
+<section class="dash-stats"><h2>StudyVerse</h2><p>Cùng xem một vài nhiệm vụ của bạn ngày hôm nay</p>
+<div class="dash-cards">
+<article class="stat-card"><div class="stat-icon"><img src="../assets/icons/stat-total.svg" alt=""></div><div class="stat-text"><strong class="stat-num" id="statTotal">0</strong><span class="stat-label">Tổng nhiệm vụ</span></div><div class="donut"></div></article>
+<article class="stat-card"><div class="stat-icon"><img src="../assets/icons/stat-open.svg" alt=""></div><div class="stat-text"><strong class="stat-num" id="statOpen">0</strong><span class="stat-label">Chưa hoàn thành</span></div><div class="donut donut-open"></div></article>
+<article class="stat-card"><div class="stat-icon"><img src="../assets/icons/stat-overdue.svg" alt=""></div><div class="stat-text"><strong class="stat-num" id="statOverdue">0</strong><span class="stat-label">Quá hạn</span></div><div class="donut donut-overdue"></div></article>
+</div></section>
+<section class="dash-lower">
+<div class="card"><h3>Nhiệm vụ sắp đến hạn</h3><ul id="upcomingList"></ul></div>
+<div class="card" id="overallBox"><h3>Tiến độ tổng thể</h3><div class="progress"><span id="overallBar"></span></div><p class="overall-text" id="overallText"></p></div>
+</section>
+</div>
+</main>
+<script src="../js/storage.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/dashboard.js"></script>
+</body>
+</html>
